@@ -1,0 +1,10 @@
+apiVersion: 1
+
+datasources:
+- name: Prometheus
+  type: prometheus
+  access: proxy
+  url: http://app-docker355640.westeurope.cloudapp.azure.com:9090/
+  jsonData:
+    tlsSkipVerify: true
+    timeInterval: "5s"

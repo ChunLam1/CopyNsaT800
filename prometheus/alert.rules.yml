@@ -1,0 +1,10 @@
+groups:
+  - name: traefik
+    rules:
+      - alert: alert_ca_marche_plus
+        expr: up{job="web-app"} == 0
+        labels:
+          severity: high
+        annotations:
+          summary: "c'est cassé"
+          description: "cassé"
